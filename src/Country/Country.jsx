@@ -35,10 +35,10 @@ function Country() {
    }, [country, history]);
 
    return (
-      <div>
+      <div className="bg-gray-50">
          <Link to="/">
-            <button className="text-black bg-indigo-50 px-7 py-3 border-2 shadow-md ml-16 mt-5">
-               Back
+            <button className="text-black bg-white rounded-lg px-7 py-3 border-2 shadow-md ml-10 lg:ml-16 mt-5">
+               <i className="fas fa-long-arrow-alt-left fa-lg mr-2"></i>Back
             </button>
          </Link>
 

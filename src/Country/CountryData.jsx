@@ -2,12 +2,15 @@ import React from "react";
 
 function CountryData(props) {
    return (
-      <div className="w-80 m-auto space-y-2">
-         <h1 className="font-extrabold text-7xl">{props.name}</h1>
-         <img className="block" src={props.img} alt={props.name} />
-         <div>
+      <div className=" p-10 lg:p-20  space-y-2 flex lg:flex-row justify-around flex-col">
+         <div className="lg:max-w-md max-w-none">
+            <img className="w-screen" src={props.img} alt={props.name} />
+         </div>
+
+         <div className="space-y-2">
+            <h1 className="font-extrabold text-3xl my-8">{props.name}</h1>
             <p>
-               <span className="font-bold">Native Name: </span>
+               <span className="font-bold text-black">Native Name: </span>
                {props.native}
             </p>
             <p>
@@ -28,8 +31,8 @@ function CountryData(props) {
             </p>
          </div>
 
-         <div>
-            <p>
+         <div className="space-y-2 ">
+            <p className="lg:mt-24 md:mt-24 mt-12">
                <span className="font-bold">Top Level Domain: </span>
                {props.domain.toString().split(" ")}
             </p>
