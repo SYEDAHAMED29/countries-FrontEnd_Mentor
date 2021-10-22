@@ -33,7 +33,7 @@ function Countries() {
             />
 
             <select
-               className="w-40 lg:mt-0  mt-10 py-4 px-3 shadow-lg border-2 border-blue-400 dark:bg-custom-blue dark:border-custom-blue cursor-pointer"
+               className="w-40 lg:mt-0  mt-10 py-4 px-3 shadow-lg border-2 bg-white border-blue-400 dark:bg-custom-blue dark:border-custom-blue cursor-pointer"
                onChange={(e) => setRegion(e.target.value)}
             >
                <option value="All">Filter By Region</option>
