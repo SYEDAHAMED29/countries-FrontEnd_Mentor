@@ -19,7 +19,6 @@ function Country() {
          try {
             setLoad(true);
             const response = await axios.get(url + country);
-            console.log(response.data[0]);
             setInfo((prev) => {
                return [...prev, response.data[0]];
             });
@@ -35,9 +34,9 @@ function Country() {
    }, [country, history]);
 
    return (
-      <div className="bg-gray-50">
+      <div>
          <Link to="/">
-            <button className="text-black bg-white rounded-lg px-7 py-3 border-2 shadow-md ml-10 lg:ml-16 mt-5">
+            <button className="text-black dark:text-white bg-white dark:bg-custom-blue dark:border-custom-blue rounded-lg px-7 py-3 border-2 shadow-md ml-10 lg:ml-16 mt-5">
                <i className="fas fa-long-arrow-alt-left fa-lg mr-2"></i>Back
             </button>
          </Link>

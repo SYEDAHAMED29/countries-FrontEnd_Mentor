@@ -22,10 +22,10 @@ function Countries() {
    }, []);
 
    return (
-      <div className="bg-gray-50">
+      <div>
          <div className="p-12  lg:flex-row lg:justify-between flex flex-col ">
             <input
-               className=" p-4  lg:w-80 w-full md:w-80 lg:mx-4 border-2 border-blue-400 shadow-lg "
+               className=" p-4 text-lg lg:w-80 w-full md:w-80 lg:mx-4 border-2 border-blue-400 shadow-lg dark:bg-custom-blue dark:border-custom-blue "
                type="search"
                value={searchTerm}
                placeholder="Search For a Country"
@@ -33,7 +33,7 @@ function Countries() {
             />
 
             <select
-               className="w-40 lg:mt-0  mt-10 py-4 px-3 shadow-lg border-2 border-blue-400"
+               className="w-40 lg:mt-0  mt-10 py-4 px-3 shadow-lg border-2 border-blue-400 dark:bg-custom-blue dark:border-custom-blue cursor-pointer"
                onChange={(e) => setRegion(e.target.value)}
             >
                <option value="All">Filter By Region</option>
@@ -44,7 +44,7 @@ function Countries() {
                <option value="Oceania">Oceania</option>
             </select>
          </div>
-         <div className=" p-8 lg:p-12 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+         <div className=" p-8 lg:p-12 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 ">
             {load && <Loader />}
 
             {list

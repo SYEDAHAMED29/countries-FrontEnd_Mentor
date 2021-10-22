@@ -1,29 +1,18 @@
-import React from "react";
-import {BrowserRouter as Router} from "react-router-dom";
-import {Switch, Route} from "react-router";
-import Footer from "./Components/Footer";
+import React, {useState} from "react";
+import Routes from "./Components/Routes";
 import Header from "./Components/Header";
-import Countries from "./List/Countries";
-import Country from "./Country/Country";
-import Notfound from "./404/Notfound";
+import Footer from "./Components/Footer";
 
 function App() {
+   const [darkTheme, setDarkTheme] = useState(false);
    return (
-      <Router>
-         <Header />
-         <Switch>
-            <Route exact path="/">
-               <Countries />
-            </Route>
-            <Route path="/404">
-               <Notfound />
-            </Route>
-            <Route path="/:country">
-               <Country />
-            </Route>
-         </Switch>
-         <Footer />
-      </Router>
+      <div className={darkTheme ? "dark" : ""}>
+         <div className="dark:bg-custom-darkblue bg-gray-50 dark:text-white min-h-screen">
+            <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+            <Routes />
+            <Footer />
+         </div>
+      </div>
    );
 }
 

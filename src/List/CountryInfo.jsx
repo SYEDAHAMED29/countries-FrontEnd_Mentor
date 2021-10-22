@@ -5,7 +5,7 @@ function CountryInfo(props) {
    const history = useHistory();
    return (
       <div
-         className="pb-8 max-h-full bg-white rounded-xl shadow-md m-5 cursor-pointer transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 "
+         className="pb-8 max-h-full bg-white dark:bg-custom-blue rounded-xl shadow-md m-5 cursor-pointer transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 "
          onClick={() => history.push(`/${props.name}`)}
       >
          <img className="h-1/2 w-full " src={props.img} alt={props.name} loading="lazy" />
