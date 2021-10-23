@@ -55,7 +55,6 @@ function Countries() {
                   } else if (item.name.common.toLowerCase().includes(searchTerm)) {
                      return item;
                   }
-                  return false; //? To remove the filter error in the console.
                })
                .filter((item) => {
                   //*Filtering the Region
@@ -64,7 +63,6 @@ function Countries() {
                   } else if (item.region.toLowerCase().includes(region.toLowerCase())) {
                      return item;
                   }
-                  return false; //? To remove the filter error in the console.
                })
                .map((item, index) => (
                   <CountryInfo
