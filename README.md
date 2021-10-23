@@ -1,8 +1,6 @@
 ### Links
 
--  Live Site URL: [](https://countries-syed.vercel.app/)
-
-## My process
+-  [Live Site URL](https://countries-syed.vercel.app/)
 
 ### Built with
 
@@ -22,5 +20,3 @@ Light Mode
 Dark Mode
 
 ![Dark](./design/rest-dark.png)
-
-In the project directory, you can run:
